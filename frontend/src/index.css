@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #f7f6f2;
+  --color-navy-900: #fffefa;
+  --color-navy-800: #ffffff;
+  --color-navy-700: #f0efe9;
+  --color-navy-600: #e2e5e9;
+  --color-navy-500: #cbd2dc;
+  --color-navy-400: #71809a;
+  --color-cream-50: #14233b;
+  --color-cream-100: #22324c;
+  --color-cream-200: #394960;
+  --color-cream-300: #647287;
+  --color-accent-400: #3977cf;
+  --color-accent-500: #285da8;
+  --color-accent-600: #1c4b91;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+:root { font-family: var(--font-sans); color: #17243b; background: #f7f6f2; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #f7f6f2; color: #17243b; }
+button, input, textarea, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+::selection { background: #cbdcf3; color: #14233b; }
+:focus-visible { outline: 3px solid #4f80c6; outline-offset: 3px; }
+
+/* Bridge existing page utility names into the light editorial palette. */
+.text-white { color: #17243b !important; }
+.text-white\/60, .text-white\/70 { color: #647287 !important; }
+.text-white\/50, .text-white\/40, .text-white\/30 { color: #7a8799 !important; }
+.glass-card { background: #fffefa; border: 1px solid #e9e6df; border-radius: 16px; box-shadow: 0 8px 28px rgba(24, 39, 64, .045); }
+.input-base { width: 100%; padding: .75rem .9rem; background: #fffefa; border: 1px solid #d9dce1; border-radius: 9px; color: #17243b; font-size: .94rem; outline: none; transition: border-color .18s, box-shadow .18s; }
+.input-base::placeholder { color: #8792a1; }
+.input-base:focus { border-color: #4f80c6; box-shadow: 0 0 0 3px rgba(57, 119, 207, .15); }
+.btn-primary, .btn-secondary, .btn-danger { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: 8px; font-weight: 600; text-decoration: none; cursor: pointer; transition: transform .18s, background .18s, box-shadow .18s; }
+.btn-primary { padding: .68rem 1.25rem; border: 1px solid #285da8; background: #285da8; color: white !important; box-shadow: 0 3px 9px rgba(40, 93, 168, .13); }
+.btn-primary:hover { background: #1c4b91; transform: translateY(-1px); box-shadow: 0 8px 18px rgba(40, 93, 168, .2); }
+.btn-primary:disabled, .btn-secondary:disabled, .btn-danger:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+.btn-secondary { padding: .65rem 1.2rem; border: 1px solid #d9dce1; background: #fffefa; color: #263750 !important; }
+.btn-secondary:hover { background: #f0efe9; border-color: #b9c4d2; }
+.btn-danger { padding: .5rem .9rem; border: 0; background: #b93838; color: white !important; }
+.btn-danger:hover { background: #982e32; }
+.badge { display: inline-flex; align-items: center; width: fit-content; padding: .22rem .65rem; border-radius: 999px; font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.badge-blue { color: #285da8; background: #e9f0fa; border: 1px solid #d5e2f4; }
+.badge-green { color: #267044; background: #e6f4e9; border: 1px solid #d3ead8; }
+.badge-yellow { color: #845f16; background: #f8f0dc; border: 1px solid #eee1bd; }
+.divider { border: 0; border-top: 1px solid #e8e5de; }
+.gradient-text { background: linear-gradient(110deg, #285da8, #6689b7); -webkit-background-clip: text; background-clip: text; color: transparent !important; -webkit-text-fill-color: transparent; }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.page-enter { animation: page-enter .35s ease both; }
+@keyframes page-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Hero image cards retain their ink-on-image contrast. */
+.featured-article .text-white, .featured-article .text-white\/60, .featured-article .text-white\/40 { color: #fff !important; }
+.featured-article .badge-blue { color: #fff; background: rgba(40, 93, 168, .9); border-color: rgba(255,255,255,.28); }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f2f1ec; }
+::-webkit-scrollbar-thumb { background: #c8ced6; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #8fa2bd; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
